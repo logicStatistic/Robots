@@ -23,7 +23,7 @@ public class Main {
         changeName(robot1.name);
 
         System.out.println();
-        changeName(robot1.color);
+        changeColor(robot1.color);
     }
     public static void mainRobot(String name, String color, int weight){
         System.out.println("My name is: " +" "+ name);
@@ -41,8 +41,26 @@ public class Main {
         int newWeight = scanner.nextInt();
         System.out.println();
         System.out.println("You said: " + newWeight);
-        System.out.println();
-        System.out.println("Well, then my new wieght is: " +" " + newWeight);
+
+
+        if (newWeight == 50){
+
+            System.out.println("You did not change my weight, I am" +" " + weight + " " + "already");
+            System.out.println();
+            System.out.println("INPUT A NEW AGE");
+            Scanner scanner1 = new Scanner(System.in);
+            int newWeight1 = scanner.nextInt();
+
+            if (newWeight1 == newWeight){
+                 System.out.println("The same age, rerun program and try again");
+             } else{
+                 System.out.println("Thank you! my new age is :" + " "+ newWeight1 );
+             }
+
+        } else {
+
+            System.out.println("Well, then my new weight is: " + " " + newWeight);
+        }
 
         return newWeight;
     }
@@ -58,16 +76,15 @@ public class Main {
 
         return newName;
     }
-
     public static String changeColor(String color){
         System.out.println();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("PLEASE GIVE ME A NEW COLOR");
+        System.out.println("GIVE ME A NEW COLOR");
         String newColor = scanner.nextLine();
         System.out.println();
-        System.out.println("Oh I am so excited, you gave me a nice color: " +" "+ newColor);
+        System.out.println("I am so excited, I like the color: " +" "+ newColor);
         System.out.println();
-        System.out.println("My color is now: " +" " + newColor);
+        System.out.println("My color is light: " +" " + newColor);
 
         return newColor;
     }
